@@ -5,6 +5,16 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Chapter 5: Order — Ocean From Motion</title>
 <link rel="stylesheet" href="/Ocean-From-Motion/style.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body, {
+    delimiters: [
+      {left: '\\[', right: '\\]', display: true},
+      {left: '\\(', right: '\\)', display: false}
+    ],
+    throwOnError: false
+  });"></script>
 </head>
 <body>
 <header>
@@ -175,46 +185,55 @@ It is not ranking, flow, or process.</p>
 <p>This section states the Robinson axioms explicitly and reinterprets them as structural constraints imposed by order–motion, rather than as axioms about numbers, counting, or succession in time.</p>
 <p>The intent is not to define arithmetic as such, but to show that once order–motion exists, these axioms are unavoidable and sufficient.</p>
 <h2><strong>6.1 Structural Domain</strong></h2>
-<p>Let  be the set of admissible motion tokens as defined by heat, polarity, existence, and righteousness.</p>
-<p>Elements of  are not numbers. They are order-stable motion structures.</p>
-<p>The successor symbol  denotes <em>structural differentiation</em>: the minimal operation that produces a distinct but related motion structure, without implying sequence, growth, or temporal succession.</p>
+<p>Let \(M\) be the set of admissible motion tokens as defined by heat, polarity, existence, and righteousness.</p>
+<p>Elements of \(M\) are not numbers. They are order-stable motion structures.</p>
+<p>The successor symbol \(S\left(⋅\right)\) denotes <em>structural differentiation</em>: the minimal operation that produces a distinct but related motion structure, without implying sequence, growth, or temporal succession.</p>
 <h2><strong>6.2 Distinguished Identity Element</strong></h2>
-<p>There exists a distinguished element  such that:</p>
+<p>There exists a distinguished element \(0\in M\) such that:</p>
+<div class="math-display">\[\forall x\in M,\;\;x+0=x\]</div>
 <p>This element represents <strong>perfect evaluative alignment</strong>. It is not absence of motion and does not represent nothingness. It is a neutral structural configuration.</p>
 <h2><strong>6.3 Non-Triviality of Structure</strong></h2>
+<div class="math-display">\[\forall x\in M,\;\;S\left(x\right)\neq0\]</div>
 <p>No structurally admissible successor collapses to perfect alignment. This ensures that order–motion is non-degenerate.</p>
 <h2><strong>6.4 Injectivity of Structural Extension</strong></h2>
+<div class="math-display">\[\forall x,y\in M,\;\;S\left(x\right)=S\left(y\right)\Rightarrow x=y\]</div>
 <p>Structural extension preserves distinguishability. This axiom enforces consistency without introducing hierarchy or magnitude.</p>
 <h2><strong>6.5 Closure Under Structural Combination</strong></h2>
+<div class="math-display">\[\forall x,y\in M,\;\;x+S\left(y\right)=S\left(x+y\right)\]</div>
 <p>This expresses invariance under composition. Importantly, it does <strong>not</strong> assert iteration in time—only that structure composes consistently.</p>
 <h2><strong>6.6 No Induction Axiom</strong></h2>
 <p>No induction principle is assumed.</p>
 <p>This omission is essential. Induction would introduce global progression, infinite extension, and successor dominance—all of which exceed the scope of order–motion.</p>
 <h2><strong>6.7 Interpretation as Order Constraints</strong></h2>
 <p>Under this interpretation:</p>
-<p> is structural neutrality</p>
-<p> is structural extension, not temporal succession</p>
-<p> is relational combination</p>
+<p>\(0\) is structural neutrality</p>
+<p>\(S\left(⋅\right)\) is structural extension, not temporal succession</p>
+<p>\(+\) is relational combination</p>
 <p>Together, these axioms enforce <strong>minimal structural consistency</strong> and nothing more.</p>
 <p>They define exactly the algebra required for order–motion—and no additional structure.</p>
 <h2><strong>7. Formal Definition of Order–Motion</strong></h2>
 <p>With the Robinson axioms established as structural constraints, order–motion can now be defined formally.</p>
 <h2><strong>7.1 Order–Motion Structure</strong></h2>
 <p>Order–motion is defined as the triple:</p>
+<div class="math-display">\[\left(M,+,\equiv\right)\]</div>
 <p>where:</p>
-<p> is the set of motion tokens</p>
-<p> is structural combination</p>
-<p> is structural equivalence</p>
+<p>\(M\) is the set of motion tokens</p>
+<p>\(+\) is structural combination</p>
+<p>\(\equiv\) is structural equivalence</p>
 <h2><strong>7.2 Closure</strong></h2>
+<div class="math-display">\[\forall a,b\in M,\;\;a+b\in M\]</div>
 <p>Closure is local and finite. No assumption of infinite extensibility is made.</p>
 <h2><strong>7.3 Structural Identity</strong></h2>
+<div class="math-display">\[\exists0\in M\;such\;that\;a+0\equiv a\]</div>
 <p>Identity expresses perfect evaluative alignment, not null motion.</p>
 <h2><strong>7.4 Equivalence Preservation</strong></h2>
+<div class="math-display">\[a\equiv b\Rightarrow a+c\equiv b+c\]</div>
 <p>Evaluative invariance is preserved under composition.</p>
 <h2><strong>7.5 Associativity Without Order</strong></h2>
+<div class="math-display">\[\left(a+b\right)+c\equiv a+\left(b+c\right)\]</div>
 <p>Associativity reflects grouping invariance, not temporal order.</p>
 <h2><strong>7.6 Partial Comparability</strong></h2>
-<p>No total order relation is defined on .</p>
+<p>No total order relation is defined on \(M\).</p>
 <p>Some motion structures may be incomparable without contradiction. This preserves non-hierarchical order.</p>
 <h2><strong>7.7 Scope of the Formalism</strong></h2>
 <p>This formal structure:</p>
@@ -223,22 +242,26 @@ It is not ranking, flow, or process.</p>
 <p>forbids causality, time, computation, and induction</p>
 <p>Order–motion is therefore the <strong>last pre-dynamic layer</strong> of the Motion Calendar.</p>
 <p>All higher structure—computation, thermodynamics, spatial ordering, and physical law—must arise <em>after</em> this point.</p>
-<h2><strong>8. Tightening Order–Motion to Robinson Arithmetic</strong> </h2>
-<p>This section fixes the formal strength of order–motion <strong>exactly</strong> at Robinson arithmetic . No axioms beyond are assumed, and each axiom is interpreted strictly as a <strong>structural constraint</strong> on order–motion rather than a claim about counting, iteration, or time.</p>
+<h2><strong>8. Tightening Order–Motion to Robinson Arithmetic</strong> \(Q\)</h2>
+<p>This section fixes the formal strength of order–motion <strong>exactly</strong> at Robinson arithmetic \(Q\). No axioms beyond \(Q\;\)are assumed, and each axiom is interpreted strictly as a <strong>structural constraint</strong> on order–motion rather than a claim about counting, iteration, or time.</p>
 <h2><strong>8.1 Language and Symbols</strong></h2>
 <p>The language consists of:</p>
-<p>a constant symbol ,</p>
-<p>a unary function symbol </p>
-<p>a binary function symbol .</p>
+<p>a constant symbol \(0\),</p>
+<p>a unary function symbol \(S\left(⋅\right),\)</p>
+<p>a binary function symbol \(+\).</p>
 <p>No order relation, no multiplication, and no induction schema are included.</p>
-<h2><strong>8.2 Axioms of</strong>  <strong>(Structural Interpretation)</strong></h2>
+<h2><strong>8.2 Axioms of</strong> \(Q\) <strong>(Structural Interpretation)</strong></h2>
 <p><strong>Q1 — Identity</strong></p>
+<div class="math-display">\[\forall x\;\;\;x+0=x\]</div>
 <p>Structural neutrality: perfect evaluative alignment leaves structure unchanged.</p>
 <p><strong>Q2 — Non-collapse</strong></p>
+<div class="math-display">\[\forall x\;\;\;S\left(x\right)\neq0\]</div>
 <p>No structural extension collapses into neutrality. Order–motion is non-degenerate.</p>
 <p><strong>Q3 — Injectivity of Extension</strong></p>
+<div class="math-display">\[\forall x,\;\;yS\left(x\right)=S\left(y\right)\Rightarrow x=y\]</div>
 <p>Structural extension preserves distinguishability without hierarchy.</p>
 <p><strong>Q4 — Recursive Addition (Right)</strong></p>
+<div class="math-display">\[\forall x,yx+S\left(y\right)=S\left(x+y\right)\]</div>
 <p>Composition is invariant under structural extension. This expresses consistency of combination, not iteration in time.</p>
 <h2><strong>8.3 Explicit Exclusions</strong></h2>
 <p>The following are <strong>not</strong> assumed:</p>
@@ -249,14 +272,14 @@ It is not ranking, flow, or process.</p>
 <p>temporal succession,</p>
 <p>computation or execution.</p>
 <p>These exclusions are essential. Any of them would raise the descriptive layer beyond order–motion.</p>
-<h2><strong>8.4 Why</strong>  <strong>Is Exact</strong></h2>
+<h2><strong>8.4 Why</strong> \(Q\) <strong>Is Exact</strong></h2>
 <p>Weaker systems fail to preserve closure and identity under composition.</p>
 <p>Stronger systems introduce induction, hierarchy, or progression.</p>
-<p> is therefore <strong>maximal under the constraint of minimal structure</strong>.</p>
-<p>Order–motion is thus <strong>isomorphic in strength</strong> to Robinson arithmetic , not as number theory, but as the algebra of structural consistency.</p>
+<p>\(Q\) is therefore <strong>maximal under the constraint of minimal structure</strong>.</p>
+<p>Order–motion is thus <strong>isomorphic in strength</strong> to Robinson arithmetic \(Q\), not as number theory, but as the algebra of structural consistency.</p>
 <h2><strong>9. Summary</strong></h2>
 <p>This paper has established <strong>order–motion</strong> as the minimal structural layer that arises once motion admits magnitude, distinction, persistence, and evaluative consistency. Order has been shown to be neither temporal sequence nor causal progression, but <strong>structural invariance under composition</strong>.</p>
-<p>By tightening the formal strength of order–motion precisely to Robinson arithmetic , the framework fixes the maximum structure permissible before dynamics appear. No induction, global ordering, or computational process is assumed. Order is complete at this level because it constrains relations without directing them.</p>
+<p>By tightening the formal strength of order–motion precisely to Robinson arithmetic \(Q\), the framework fixes the maximum structure permissible before dynamics appear. No induction, global ordering, or computational process is assumed. Order is complete at this level because it constrains relations without directing them.</p>
 <p>However, order alone does not account for <strong>orientation</strong>.</p>
 <p>Structural consistency can exist without direction, without adjacency, and without displacement. An ordered system may be perfectly coherent while remaining spatially and kinematically undefined. Nothing in order–motion specifies <em>where</em> relations occur, <em>how</em> they are oriented, or <em>what it means for one configuration to differ from another in position</em>.</p>
 <p>To move beyond structure into geometry, navigation, and physical interaction, an additional motion function is required—one that introduces <strong>directional distinction without reintroducing causality or time</strong>.</p>

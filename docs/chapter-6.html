@@ -5,6 +5,16 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Chapter 6: Movement — Ocean From Motion</title>
 <link rel="stylesheet" href="/Ocean-From-Motion/style.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body, {
+    delimiters: [
+      {left: '\\[', right: '\\]', display: true},
+      {left: '\\(', right: '\\)', display: false}
+    ],
+    throwOnError: false
+  });"></script>
 </head>
 <body>
 <header>
@@ -176,49 +186,56 @@ With movement, relations are oriented.</p>
 <p>The next layer introduces <strong>interaction</strong>—where orientation begins to matter dynamically, and where physics, causality, and change finally enter.</p>
 <h2><strong>6. Formal Movement Function with Indexed Directional Operators</strong></h2>
 <p>Movement is formalized as a system of <strong>finite, indexed displacement operators</strong> acting on motion structures stabilized under order–motion. These operators introduce orientation and adjacency without invoking time, causality, metric distance, or dynamics.</p>
-<p>Let  denote the set of motion structures admissible under order–motion</p>
+<p>Let \(M\) denote the set of motion structures admissible under order–motion</p>
 <h2><strong>6.1 Directional Label Set</strong></h2>
 <p>Define the finite set of movement directions:</p>
-<p>Each element labels a <strong>directional relation</strong>, not a vector, trajectory, or physical motion.</p>
+<div class="math-display">\[D_{12}=\{L,R,U,D,F,B,N,S,E,W,A,Z\}\]</div>
+<p>Each element \(d\in D_{12\;}\)labels a <strong>directional relation</strong>, not a vector, trajectory, or physical motion.</p>
 <p>The intended interpretations are:</p>
-<p>: left / right (local lateral orientation)</p>
-<p>: up / down (local vertical orientation)</p>
-<p>: forward / backward (local depth orientation)</p>
-<p>: north / south (extended planar orientation)</p>
-<p>: east / west (extended planar orientation)</p>
-<p>: above / below (layering relations)</p>
+<p>\(L/R\): left / right (local lateral orientation)</p>
+<p>\(U/D\): up / down (local vertical orientation)</p>
+<p>\(F/B\): forward / backward (local depth orientation)</p>
+<p>\(N/S\): north / south (extended planar orientation)</p>
+<p>\(E/W\): east / west (extended planar orientation)</p>
+<p>\(A/Z\): above / below (layering relations)</p>
 <p>These labels are semantic identifiers only; no geometric, metric, or dynamic meaning is implied.</p>
 <h2><strong>6.2 Indexed Finite Displacement Operators</strong></h2>
 <p>Movement is expressed through <strong>finite displacement operators</strong>:</p>
-<p>For, the expression</p>
-<p>denotes the <strong>oriented, finite re-expression</strong> of the motion structure  along directional relation  at structural index .</p>
-<p>The index :</p>
+<div class="math-display">\[\Delta_{k}^{d}:M\to M,\;\;d\in D_{12\;},\;k\in Z,\;k\;finite.\]</div>
+<p>For\(\;m\in M\), the expression</p>
+<div class="math-display">\[\Delta_{k}^{d}:m\]</div>
+<p>denotes the <strong>oriented, finite re-expression</strong> of the motion structure \(m\) along directional relation \(d\) at structural index \(k\).</p>
+<p>The index \(k\):</p>
 <p>denotes structural adjacency or layering,</p>
 <p>does not represent time, distance, magnitude, or iteration,</p>
 <p>and is not subject to induction.</p>
 <h2><strong>6.3 Definition of the Movement Function</strong></h2>
 <p>The movement function is defined as the family:</p>
-<p>​.</p>
+<p>​\(f_{k12}=\{\Delta_{k}^{d}|d\in D_{12},k\in Z_{fin}\}\).</p>
 <p>This family exhausts all admissible movement relations at the pre-dynamic level.</p>
 <h2><strong>6.4 Identity and Zero Displacement</strong></h2>
-<p>For all ,</p>
-<p>Zero displacement represents <strong>no structural offset</strong> along direction . It is an identity of orientation, not an absence of motion or structure.</p>
+<p>For all \(d\in D_{12}\),</p>
+<div class="math-display">\[\Delta_{0}^{d}\left(m\right)\equiv m.\]</div>
+<p>Zero displacement represents <strong>no structural offset</strong> along direction \(d\). It is an identity of orientation, not an absence of motion or structure.</p>
 <h2><strong>6.5 Directional Opposition</strong></h2>
-<p>Each directional label  has a unique opposed label  such that:</p>
-<p>.</p>
+<p>Each directional label \(d\) has a unique opposed label \(d\;^{-1}\in D_{12}\) such that:</p>
+<p>\(\Delta_{k}^{d^{-1}}\left(\Delta_{k}^{d}\left(m\right)\right)\equiv m\).</p>
 <p>Opposition pairs include:</p>
+<p>\(L^{-1}=R,\) \(U^{-1}=D,\) \(F^{-1}=B,\) \(N^{-1}=S,\) \(E^{-1}=W,\) \(A^{-1}=Z\)</p>
 <p>Left opposes Right, Up opposes Down, Forward opposes Backward, North opposes South, East opposes West, Above opposes Below.</p>
 <p>Opposition expresses <strong>orientation reversal</strong>, not subtraction, negation, or cancellation of motion.</p>
 <h2><strong>6.6 Composition and Index Additivity</strong></h2>
 <p>Finite displacements along the same directional relation compose additively:</p>
+<div class="math-display">\[\Delta_{a}^{d}\left(\Delta_{b}^{d}\left(m\right)\right)\equiv\Delta_{a+b}^{d}\left(m\right)\]</div>
 <p>This additivity is <strong>structural</strong>, not inductive, and does not imply repetition in time.</p>
 <p>Displacements along different directional relations generally do not commute:</p>
+<div class="math-display">\[\Delta_{a}^{d_{1}}\left(\Delta_{b}^{d_{2}}\left(m\right)\right)\neq\Delta_{b}^{d_{2}}\left(\Delta_{a}^{d_{1}}\left(m\right)\right).\]</div>
 <p>Order sensitivity reflects geometric orientation, not temporal sequence.</p>
 <h2><strong>6.7 Dimensional Independence</strong></h2>
 <p>Directional relations act along independent structural axes:</p>
-<p> define a local orientational frame</p>
-<p>define extended planar orientation</p>
-<p> define vertical layering (stratified adjacency)</p>
+<p>\(L/R,\;U/D,\;F/B\) define a local orientational frame</p>
+<p>\(N/S,E/W\;\)define extended planar orientation</p>
+<p>\(A/Z\) define vertical layering (stratified adjacency)</p>
 <p>Finite displacements along independent axes compose to form higher-order spatial relations without metric structure.</p>
 <h2><strong>6.8 Absence of Metric and Dynamics</strong></h2>
 <p>No metric or dynamic structure is introduced at this level:</p>
@@ -226,7 +243,7 @@ With movement, relations are oriented.</p>
 <p>no velocity or acceleration,</p>
 <p>no force or energy,</p>
 <p>no curvature or trajectory.</p>
-<p>The operator  denotes <strong>finite structural difference</strong>, not a differential or temporal change.</p>
+<p>The operator \(\Delta\) denotes <strong>finite structural difference</strong>, not a differential or temporal change.</p>
 <h2><strong>6.9 Relationship to Order–Motion</strong></h2>
 <p>Movement operates strictly on motion structures stabilized by order–motion.</p>
 <p>Order constrains admissible relations.</p>
@@ -237,7 +254,7 @@ With movement, relations are oriented.</p>
 <p>evaluative alignment.</p>
 <p>Movement does not modify correctness or structure.</p>
 <h2><strong>6.10 Scope of the Movement Function</strong></h2>
-<p>The movement function ​ supports:</p>
+<p>The movement function \(f_{k12}\)​ supports:</p>
 <p>adjacency,</p>
 <p>orientation,</p>
 <p>indexed spatial differentiation,</p>

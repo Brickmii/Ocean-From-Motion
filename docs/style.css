@@ -132,6 +132,12 @@ p.list-item {
   margin-bottom: 0.5rem;
 }
 
+.math-display {
+  margin: 1.25rem 0;
+  text-align: center;
+  overflow-x: auto;
+}
+
 strong {
   font-weight: bold;
 }

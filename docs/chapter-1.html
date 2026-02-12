@@ -5,6 +5,16 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Chapter 1: Heat — Ocean From Motion</title>
 <link rel="stylesheet" href="/Ocean-From-Motion/style.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body, {
+    delimiters: [
+      {left: '\\[', right: '\\]', display: true},
+      {left: '\\(', right: '\\)', display: false}
+    ],
+    throwOnError: false
+  });"></script>
 </head>
 <body>
 <header>
@@ -34,27 +44,33 @@
 <h2><strong>3.1 Coherent Motion Units</strong></h2>
 <p>To formalize heat quantitatively, the Motion Calendar introduces the notion of a <strong>coherent motion unit</strong>. A coherent motion unit represents a minimal, indivisible contribution to motion magnitude under the Heat function. Coherence, in this context, does not imply coordination, synchronization, or causal interaction. It denotes only that a collection of motion-events may be treated as a single unit for the purpose of measuring magnitude.</p>
 <p>Formally, coherence defines an equivalence relation on motion-events with respect to Heat. Motion-events that contribute equally and inseparably to magnitude are said to belong to the same coherent unit. Motion-events that may be distinguished without altering total magnitude constitute separate coherent units.</p>
-<p>Let each coherent motion unit contribute exactly one unit of heat, denoted by .</p>
-<p>A system containing  coherent motion units has heat magnitude:</p>
+<p>Let each coherent motion unit contribute exactly one unit of heat, denoted by \(k\).</p>
+<p>A system containing \(n\) coherent motion units has heat magnitude:</p>
+<div class="math-display">\[\kappa\;=\;n\;k\]</div>
 <p>Where:</p>
-<p> is the <strong>heat constant</strong>, representing the minimal indivisible unit of motion magnitude</p>
-<p> is the <strong>heat index</strong>, giving the number of coherent motion units present.</p>
+<p>\(k\) is the <strong>heat constant</strong>, representing the minimal indivisible unit of motion magnitude</p>
+<p>\(n\in N\) is the <strong>heat index</strong>, giving the number of coherent motion units present.</p>
 <p>No further structure is implied.</p>
 <h2><strong>3.2 Definition of Heat</strong></h2>
-<p>Heat is defined as a non-negative scalar measure of coherent motion units. Let  denote a finite collection of coherent motion units. The heat magnitude associated with  is given by:</p>
+<p>Heat is defined as a non-negative scalar measure of coherent motion units. Let \(M\) denote a finite collection of coherent motion units. The heat magnitude associated with \(M\) is given by:</p>
+<div class="math-display">\[\kappa\left(M\right)\in R\;_{\geq0}\]</div>
 <p>In its simplest normalized form, each coherent motion unit contributes equally, yielding:</p>
-<p>where  denotes the cardinality of the motion substrate. The integer  is the heat index.</p>
+<div class="math-display">\[\kappa\left(M\right)=\;|M|k\]</div>
+<p>where \(\left|M\right|\) denotes the cardinality of the motion substrate. The integer \(\left|M\right|\) is the heat index.</p>
 <p>A heat index of one corresponds to a single coherent motion unit. A heat index of two corresponds to two units of heat, which may consist of two distinct and distinguishable motions. Heat magnitude depends only on the number of coherent units present, not on their internal structure.</p>
 <p>More generally, coherent motion units may be assigned positive scalar weights, allowing heat magnitude to be represented as:</p>
-<p>with </p>
-<p>Here, the index  is purely formal and serves only to enumerate coherent motion units; it carries no informational content.</p>
+<div class="math-display">\[\kappa\left(M\right)=k\sum_{i=1}^{\left|M\right|} w_{i}\]</div>
+<p>with \(w_{i}>0\)</p>
+<p>Here, the index \(i\) is purely formal and serves only to enumerate coherent motion units; it carries no informational content.</p>
 <p>This generalization preserves the scalar nature of heat while allowing for later mappings to physical systems in which contributions to motion magnitude are not uniform.</p>
 <h2><strong>3.3 Primitive Properties of Heat</strong></h2>
 <p>From its definition, heat satisfies several fundamental properties:</p>
 <p><strong>Non-negativity</strong></p>
+<div class="math-display">\[\kappa\left(M\right)\geq0\]</div>
 <p><strong>Null motion</strong></p>
-<p><strong>Additivity</strong>
-For disjoint collections and :</p>
+<div class="math-display">\[\kappa\left(\emptyset\right)=0\]</div>
+<p><strong>Additivity</strong>For disjoint collections \(M_{1}\;\)and \(M_{2}\):</p>
+<div class="math-display">\[\kappa\left(M_{1}\cup M_{2}\right)=\kappa\left(M_{1}\right)+\kappa\left(M_{2}\right)\]</div>
 <p>These properties establish heat as a measure-like quantity, but without any implication of direction, flow, or conservation across time. Additivity expresses only that magnitudes combine; it does not imply interaction, transfer, or causation.</p>
 <h2><strong>3.4 Non-Causality of Heat</strong></h2>
 <p>It is critical to emphasize that heat, as defined here, is <strong>non-causal</strong>. Although heat may be decomposed, grouped, or counted, it does not encode preference, bias, or influence. There is no distinction between increase and decrease, source and sink, or before and after. Heat does not flow; it accumulates. Flow, bias, and causal asymmetry arise only with the introduction of polarity.</p>
@@ -66,41 +82,51 @@ For disjoint collections and :</p>
 <p>This section formalizes the compositional and algebraic behavior of heat magnitude. The goal is to specify exactly what operations are valid at the heat level, and to rule out any operations that would implicitly introduce direction, causality, persistence, or information.</p>
 <h3><strong>3.6.1 Heat Magnitude Space</strong></h3>
 <p>Heat magnitude takes values in the non-negative reals:</p>
+<div class="math-display">\[\kappa\left(M\right)\in R_{\geq0}\]</div>
 <p>and in the normalized unit-count form:</p>
-<p>where  is the heat constant and is the heat index.</p>
+<div class="math-display">\[\kappa\left(M\right)=\left|M\right|k\]</div>
+<p>where \(k\) is the heat constant and \(\left|M\right|\in N\;\)is the heat index.</p>
 <h3><strong>3.6.2 Composition by Union</strong></h3>
-<p>Let  and  be disjoint motion substrates. Composition of substrates is given by union:</p>
+<p>Let \(M_{1}\) and \(M_{2}\) be disjoint motion substrates. Composition of substrates is given by union:</p>
+<div class="math-display">\[M_{1}\oplus M_{2}:=M_{1}\cup M_{2}\]</div>
 <p>Heat is additive under this composition:</p>
+<div class="math-display">\[\kappa\left(M_{1}\oplus M_{2}\right)=\;\kappa\left(M_{1}\right)+\;\kappa\left(M_{2}\right)\]</div>
 <p>The operation ⊕ is associative and commutative on disjoint substrates, and ∅ acts as the identity element.</p>
 <h3><strong>3.6.3 Additive Monoid Structure</strong></h3>
 <p>Define the heat-magnitude carrier:</p>
-<p>with binary operation + induced by addition on . Then:</p>
-<p>(,+,0)</p>
+<div class="math-display">\[\kappa\;:=\{nk|n\in N\cup\{0\}\}\]</div>
+<p>with binary operation + induced by addition on \(R_{\geq0}\). Then:</p>
+<p>(\(\kappa\),+,0)</p>
 <p>forms a <strong>commutative monoid</strong>, where:</p>
-<p>closure holds:  </p>
+<p>closure holds: \(nk+mk=\left(n+m\right)k\in\) \(\kappa\)</p>
 <p>associativity holds</p>
 <p>commutativity holds</p>
-<p>identity holds: </p>
-<p>No inverses exist in 𝜅. In particular,   for . Thus, subtraction is not a valid operation within the algebraic function of heat.</p>
+<p>identity holds: \(0+nk=nk\)</p>
+<p>No inverses exist in 𝜅. In particular, \(-nk\notin\) \(\kappa\) for \(n>0\). Thus, subtraction is not a valid operation within the algebraic function of heat.</p>
 <h3><strong>3.6.4 Scaling (Non-negative Scalar Multiplication)</strong></h3>
 <p>Heat magnitude may be rescaled by non-negative scalars:</p>
-<p> 𝜅()  </p>
+<p>\(\alpha\geq0,\;\alpha\) 𝜅(\(M\)) \(\in\) \(R_{\geq0}\)</p>
 <p>Heat magnitude in unit form:</p>
+<div class="math-display">\[\alpha\left(nk\right)=\left(\alpha n\right)k\]</div>
 <p>This scaling is purely representational and does not imply compression, dilution, redistribution, or flow of coherent motion units. It changes only the numeric representation of magnitude.</p>
 <h3><strong>3.6.5 Heat Equivalence Classes</strong></h3>
 <p>Heat induces an equivalence relation on motion substrates:</p>
+<div class="math-display">\[M_{1}\sim_{\kappa}\;M_{2}\overset{\Leftrightarrow}{}\kappa\left(M_{1}\right)=\;\kappa\left(M_{2}\right)\]</div>
 <p>Substrates in the same equivalence class are indistinguishable under heat alone. This equivalence does not imply similarity of internal structure, origin, or potential future behavior; it asserts only equality of motion magnitude.</p>
 <h3><strong>3.6.6 Order Induced by Heat</strong></h3>
 <p>Heat induces a total preorder on substrates:</p>
+<div class="math-display">\[M_{1}\precsim\;M_{2}\overset{\Leftrightarrow}{}\kappa\left(M_{1}\right)\leq\;\kappa\left(M_{2}\right)\]</div>
 <p>This order is purely quantitative. It does not encode preference, tendency, advantage, or causal influence. It provides only comparison of magnitude.</p>
 <h3><strong>3.6.7 Weighted Representation (Optional Generalization)</strong></h3>
-<p>If coherent motion units carry positive weights with  then:</p>
+<p>If coherent motion units carry positive weights with \(w_{i}>0,\) then:</p>
+<div class="math-display">\[\kappa\left(M\right)=k\sum_{i=1}^{\left|M\right|} w_{i}\]</div>
 <p>The weighted representation preserves additivity over disjoint unions:</p>
+<div class="math-display">\[\kappa\left(M_{1}\cup M_{2}\right)=\kappa\left(M_{1}\right)+\kappa\left(M_{2}\right)\]</div>
 <p>provided weights sum independently across disjoint substrates. The weights do not introduce direction, causality, or information; they remain scalar contributions to magnitude.</p>
 <h3><strong>3.6.8 Forbidden Operations at the Heat Level</strong></h3>
 <p>To preserve heat as primitive motion magnitude, the following are undefined at this level:</p>
-<p>Negative heat: </p>
-<p>Heat inversion or cancellation:  as a primitive operation</p>
+<p>Negative heat: \(\kappa\left(M\right)<0\)</p>
+<p>Heat inversion or cancellation: \(\kappa\left(M_{1}\right)-\;\kappa\left(M_{2}\right)\) as a primitive operation</p>
 <p>Flow or transfer operators: any operator implying source/sink behavior</p>
 <p>Temporal conservation laws: invariants across time</p>
 <p>Information-bearing distinctions: labeling, encoding, entropy, probability</p>

@@ -5,6 +5,16 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Chapter 4: Righteousness — Ocean From Motion</title>
 <link rel="stylesheet" href="/Ocean-From-Motion/style.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body, {
+    delimiters: [
+      {left: '\\[', right: '\\]', display: true},
+      {left: '\\(', right: '\\)', display: false}
+    ],
+    throwOnError: false
+  });"></script>
 </head>
 <body>
 <header>
@@ -64,12 +74,16 @@
 <p>That distinction belongs to righteousness.</p>
 <h2><strong>4.2 Truth as a Limit Case of Righteousness</strong></h2>
 <p>Let righteousness be defined over a structured oppositional space with at least two independent axes. In the simplest nontrivial case, this space admits a single axis of opposition:</p>
-<p>Define a righteousness evaluation function:</p>
+<div class="math-display">\[\left(+x,-x\right)\]</div>
+<p>Define a righteousness \(R\;\)evaluation function:</p>
+<div class="math-display">\[R:M\to R\]</div>
 <p>where:</p>
-<p> denotes perfect alignment</p>
-<p> denotes deviation</p>
+<p>\(R\left(M\right)=0\) denotes perfect alignment</p>
+<p>\(R\left(M\right)\neq0\) denotes deviation</p>
 <p>Classical binary logic emerges when this evaluative space is collapsed into a thresholder decision:</p>
-<p>for some tolerance .</p>
+<div class="math-display">\[True\Leftrightarrow|R\left(M\right)|\leq ϵ\]</div>
+<div class="math-display">\[False\Leftrightarrow|R\left(M\right)|>ϵ\]</div>
+<p>for some tolerance \(ϵ\).</p>
 <p>In this regime, logic is not fundamental; it is a <strong>coarse quantization of righteousness</strong>.</p>
 <h2><strong>4.3 Why Logic Requires Oppositional Space</strong></h2>
 <p>A space with no opposition admits no error. A proposition evaluated in a space with only magnitude or existence cannot be wrong — it can only be present or absent.</p>
@@ -80,7 +94,8 @@
 <p>Logic inherits all three.</p>
 <p>Truth tables, implication, and contradiction are therefore not axiomatic constructs; they are compressed representations of relational evaluation within oppositional space.</p>
 <h2><strong>4.4 Multi-Valued and Non-Classical Logics</strong></h2>
-<p>When righteousness is evaluated across multiple axes (e.g ) the result is not binary but vector-valued:</p>
+<p>When righteousness is evaluated across multiple axes (e.g \(x,-x,y,-y\)) the result is not binary but vector-valued:</p>
+<div class="math-display">\[\vec{R}\left(M\right)=\left(R_{x},R_{y},…\right)\]</div>
 <p>In such spaces:</p>
 <p>classical true/false logic is insufficient</p>
 <p>many-valued logics arise naturally</p>
@@ -97,43 +112,57 @@
 <h2><strong>5.1 Righteousness as a Motion Function</strong></h2>
 <p>Righteousness evaluates motion relative to an oppositional relational frame. It assigns deviation from alignment without invoking causality, order, intent, or outcome.</p>
 <p>Let:</p>
-<p> denote a motion-instance</p>
-<p> denote a relational frame induced by polarity</p>
-<p>} denote the set of independent evaluative axes admitted by </p>
-<p> denote the righteousness function</p>
+<p>\(M\) denote a motion-instance</p>
+<p>\(F\) denote a relational frame induced by polarity</p>
+<p>\(\Lambda=\{\lambda_{1},\lambda_{2},…,\lambda_{n}\)} denote the set of independent evaluative axes admitted by \(F\)</p>
+<p>\(R\) denote the righteousness function</p>
 <p>Righteousness is defined as a primitive motion function:</p>
+<div class="math-display">\[R:M\times F\to R^{|\Lambda|}\]</div>
 <p>with component form:</p>
-<p>Each component  represents deviation along a single oppositional axis . Righteousness evaluates <strong>relational correctness</strong>, not magnitude, instantiation, or sequence.</p>
+<div class="math-display">\[R\left(M,F\right)=\left(R\lambda_{1}\left(M,F\right),R\lambda_{2}\left(M,F\right),…\right)\]</div>
+<p>Each component \(R\lambda_{k}\left(M,F\right)\) represents deviation along a single oppositional axis \(\lambda_{k}\). Righteousness evaluates <strong>relational correctness</strong>, not magnitude, instantiation, or sequence.</p>
 <h2><strong>5.2 Evaluative Identity (Perfect Alignment)</strong></h2>
 <p>There exists a neutral element of righteousness:</p>
-<p>This denotes <strong>perfect alignment</strong> of motion  within frame :</p>
+<div class="math-display">\[R\left(M,F\right)=\vec{0}\;\]</div>
+<p>This denotes <strong>perfect alignment</strong> of motion \(M\) within frame \(F\):</p>
+<div class="math-display">\[R\lambda_{k}\left(M,F\right)=0\forall\lambda_{k}\in\Lambda\]</div>
 <p>This identity is evaluative rather than additive. It does not represent absence of motion, null magnitude, or non-existence. It represents correctness: zero deviation relative to the frame.</p>
 <h2><strong>5.3 Axis Independence (Orthogonality)</strong></h2>
 <p>Evaluative axes are independent. Deviation along one axis does not imply deviation along another:</p>
+<div class="math-display">\[R_{\lambda_{a}}\left(M,F\right)⊥R_{\lambda_{b}}\left(M,F\right)\;for\;\lambda_{a}\neq\lambda_{b}\]</div>
 <p>This orthogonality is evaluative rather than geometric. It permits partial correctness, compatibility without agreement, and inconsistency without contradiction.</p>
 <h2><strong>5.4 Oppositional Symmetry</strong></h2>
-<p>Let  denote the polarity-inverted relational frame corresponding to . Righteousness obeys oppositional symmetry:</p>
+<p>Let \(F'\) denote the polarity-inverted relational frame corresponding to \(F\). Righteousness obeys oppositional symmetry:</p>
+<div class="math-display">\[R_{\lambda_{a}}\left(M,F^{'}\right)=-R_{\lambda_{k}}\left(M,F\right)\;\;\;\forall_{\lambda_{k}}\in\Lambda\]</div>
 <p>This symmetry ensures that righteousness is frame-relative and does not privilege any direction of opposition. Alignment is defined by the frame, not by absolute orientation.</p>
 <h2><strong>5.5 Composition of Righteousness</strong></h2>
-<p>For co-present motions  and ​ evaluated within the same relational frame , righteousness composes component-wise:</p>
+<p>For co-present motions \(M1\) and \(M2\)​ evaluated within the same relational frame \(F\), righteousness composes component-wise:</p>
+<div class="math-display">\[R\left(M_{1}\oplus M_{2},F\right)=R\left(M_{2},F\right)+R\left(M_{2},F\right)\]</div>
 <p>Explicitly,</p>
+<div class="math-display">\[R_{\lambda_{k}}\left(M_{1}\oplus M_{2},F\right)=R_{\lambda_{k}}\left(M_{1},F\right)+R_{\lambda_{k}}\left(M_{2},F\right)\]</div>
 <p>This composition preserves evaluative structure and permits cancellation, reinforcement, and incompatibility. It does not imply causation, sequencing, or optimization.</p>
 <h2><strong>5.6 Scalar Deviation</strong></h2>
 <p>A scalar measure of deviation may be derived via a norm:</p>
+<div class="math-display">\[∥R\left(M,F\right)∥\geq0\]</div>
 <p>This scalar represents <strong>degree of misalignment</strong> without encoding direction, preference, or intent. No gradient, improvement rule, or optimization process is implied at this layer.</p>
 <h2><strong>5.7 Non-Interference Constraints</strong></h2>
 <p>Righteousness obeys strict separation constraints:</p>
 <p><strong>No magnitude modification</strong></p>
+<div class="math-display">\[R\left(M,F\right)\;does\;not\;alter\;\kappa\left(M\right)\]</div>
 <p><strong>No existence modification</strong></p>
+<div class="math-display">\[R\left(M,F\right)\;does\;not\;alter\;E\left(M,t\right)\]</div>
 <p><strong>No causal entailment</strong></p>
+<div class="math-display">\[R\left(M,F\right)⇏\Delta E\]</div>
 <p><strong>No ordering implication</strong></p>
 <p>Righteousness evaluates without temporal or structural sequence<strong>.</strong></p>
 <p><strong>These constraints preserve righteousness</strong> as a pure evaluative motion function.</p>
 <h2><strong>5.8 Righteousness and Heat (Weighted Contribution)</strong></h2>
 <p>Heat does not determine correctness. It determines <strong>how strongly correctness contributes when multiple motions are jointly evaluated</strong>.</p>
-<p>Let  denote the heat (magnitude) of motion . Define the <strong>heat-weighted righteousness contribution</strong>:</p>
+<p>Let \(\kappa(M)\in R\;_{\geq0}\) denote the heat (magnitude) of motion \(M\). Define the <strong>heat-weighted righteousness contribution</strong>:</p>
+<div class="math-display">\[\tilde{R}\left(M,F\right)=\kappa\left(M\right)R\left(M,F\right)\]</div>
 <p>This weighting does not alter alignment or deviation. It scales influence without redefining correctness.</p>
-<p>For a set of co-present motions , the aggregate evaluative contribution is:</p>
+<p>For a set of co-present motions \(M\), the aggregate evaluative contribution is:</p>
+<div class="math-display">\[\tilde{R_{total}}\left(F\right)=\sum_{M\in M} \kappa\left(M\right)R\left(M,F\right)\]</div>
 <p>Heat therefore modulates <strong>participation</strong>, not <strong>truth</strong>. A motion with zero heat contributes no evaluative influence, but is not rendered more or less righteous.</p>
 <p>This separation prevents righteousness from collapsing into utility, reward, or optimization, while allowing magnitude to matter during composition.</p>
 <h2><strong>6. Summary</strong></h2>

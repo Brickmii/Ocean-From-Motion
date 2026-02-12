@@ -5,6 +5,16 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Chapter 3: Existence — Ocean From Motion</title>
 <link rel="stylesheet" href="/Ocean-From-Motion/style.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body, {
+    delimiters: [
+      {left: '\\[', right: '\\]', display: true},
+      {left: '\\(', right: '\\)', display: false}
+    ],
+    throwOnError: false
+  });"></script>
 </head>
 <body>
 <header>
@@ -51,68 +61,78 @@
 <p>This constraint ensures that existence cannot be used to smuggle complexity into the foundation. It gates motion into time without enriching it.</p>
 <h2><strong>4. Existence as a Motion Function</strong></h2>
 <h2><strong>4.1 Primitive Definition</strong></h2>
-<p>Let  denote a motion-instance (an element of motion under the Motion Calendar), and letdenote a temporal index set. Existence  is defined as a primitive motion function:</p>
+<p>Let \(M\) denote a motion-instance (an element of motion under the Motion Calendar), and let\(\;T\;\)denote a temporal index set. Existence \(E\) is defined as a primitive motion function:</p>
+<div class="math-display">\[E:M\times T\to\{0,1\}\]</div>
 <p>with interpretation:</p>
-<p> motion is instantiated at temporal index </p>
-<p>motion is not instantiated at temporal index</p>
+<p>\(E\left(M,t\right)=1:\) motion \(M\;\)is instantiated at temporal index \(t.\;\;\)</p>
+<p>\(E\left(M,t\right)=0:\;\)motion \(M\;\)is not instantiated at temporal index\(\;t\)</p>
 <p>This definition is intentionally minimal. It introduces neither dynamics nor persistence. It only provides the ability to evaluate instantiation at a time.</p>
 <h2><strong>4.2 Time Enters Only as an Index</strong></h2>
 <p>Time is not defined as a substance, dimension, or causal medium. In this layer it is only the index required to evaluate existence.</p>
-<p>We require only that  support distinguishability of indices:</p>
+<p>We require only that \(T\) support distinguishability of indices:</p>
+<div class="math-display">\[t1\neq t2\Rightarrow the\;evaluations\;E(M,t1)\;and\;E(M,t2)\;are\;distinct\;queries.\]</div>
 <p>No metric, continuity, or ordering is assumed yet. Ordering may be introduced later as part of the order function; here, time is only an address space for instantiation.</p>
 <h2><strong>4.3 Existence-Gated Motion Expression</strong></h2>
-<p>Let  denote the heat (magnitude) of motion . Define the <strong>expressed magnitude</strong> of  at time as:</p>
+<p>Let \(\kappa\left(M\right)\in R\geq0\) denote the heat (magnitude) of motion \(M\). Define the <strong>expressed magnitude</strong> of \(M\) at time \(t\;\)as:</p>
+<div class="math-display">\[\kappa t\left(M\right)=\kappa\left(M\right)E\left(M,t\right)\]</div>
 <p>This produces the correct gating behavior:</p>
-<p>If  then  (unexpressed magnitude, not negated heat)</p>
-<p>If , then </p>
+<p>If \(E\left(M,t\right)=0,\) then \(\kappa t\left(M\right)=0\) (unexpressed magnitude, not negated heat)</p>
+<p>If \(E\left(M,t\right)=1\), then \(\kappa t\left(M\right)=\kappa\left(M\right)\)</p>
 <p>This makes explicit the core claim: <strong>existence does not modify magnitude; it only gates whether magnitude is expressed in time.</strong></p>
 <h2><strong>4.4 Existence with Polarity</strong></h2>
-<p>Let polarity be represented as a signed decomposition of motion into opposing conserved components. One compatible formalism is to treat polarity as a sign operator  acting on a magnitude  yielding a signed expression:</p>
+<p>Let polarity be represented as a signed decomposition of motion into opposing conserved components. One compatible formalism is to treat polarity as a sign operator \(p\left(M\right)\in\{-1,+1\}\) acting on a magnitude \(\kappa\left(M\right)\) yielding a signed expression:</p>
+<div class="math-display">\[\sigma\left(M\right)=p\left(M\right)\kappa\left(M\right)\]</div>
 <p>Existence gates this expression identically:</p>
+<div class="math-display">\[\sigma t\left(M\right)=\sigma\left(M\right)E\left(M,t\right)\]</div>
 <p>Thus, polarity is definable without time, but its <em>instantiation</em> in time requires existence.</p>
 <h2><strong>4.5 Transition and the Minimal “Motion in Time” Operator</strong></h2>
 <p>To speak about “transition” without importing dynamics, define the <strong>existence toggle</strong> (difference) operator over two temporal indices:</p>
+<div class="math-display">\[\Delta E\left(M;t1,t2\right)=E\left(M,t2\right)-E\left(M,t1\right)\]</div>
 <p>Then:</p>
-<p> <strong>birth / instantiation event</strong> </p>
-<p> <strong>cessation event</strong> </p>
-<p> <strong>no existence change</strong> </p>
+<p>\(\Delta E=+1\) <strong>birth / instantiation event</strong> \(\left(0\to1\right)\)</p>
+<p>\(\Delta E=-1\) <strong>cessation event</strong> \(\left(1\to0\right)\)</p>
+<p>\(\Delta E=0\) <strong>no existence change</strong> \(\left(0\to0\;or\;1\to1\right)\)</p>
 <p>This defines “transition” purely as a relation between existence evaluations—still without duration, cause, or persistence.</p>
-<p>If  later gains an order relation  then  allows interpretation as forward temporal change, but that ordering is not required for the definition itself.</p>
+<p>If \(T\) later gains an order relation \(≺,\) then \(t1≺t2\) allows interpretation as forward temporal change, but that ordering is not required for the definition itself.</p>
 <h2><strong>4.7 Constraints and Non-Interference</strong></h2>
 <p>Existence must satisfy non-interference constraints with lower primitives:</p>
 <h2><strong>1. No magnitude modification</strong></h2>
+<div class="math-display">\[E\left(M,t\right)\;does\;not\;change\;\kappa\left(M\right)\]</div>
 <h2><strong>2.</strong> <strong>No polarity modification</strong></h2>
-<p><strong>3. No information injection</strong>
-Existence introduces only the bit-valued instantiation outcome at Any additional information must be supplied by higher functions.</p>
-<p><strong>4. No causal entailment</strong>
-The mapping is not, at this layer, constrained by causal laws. Those constraints, if introduced, occur in later motion functions.</p>
+<div class="math-display">\[E\left(M,t\right)\;does\;not\;change\;p\left(M\right)\]</div>
+<p><strong>3. No information injection</strong>Existence introduces only the bit-valued instantiation outcome at \(\left(M,t\right)\;\)Any additional information must be supplied by higher functions.</p>
+<p><strong>4. No causal entailment</strong>The mapping \(E\left(M,t\right)\;\)is not, at this layer, constrained by causal laws. Those constraints, if introduced, occur in later motion functions.</p>
 <h2><strong>4.8 Minimal Existence Algebra</strong></h2>
-<p>Since , the following identities hold for all :</p>
+<p>Since \(E\left(M,t\right)\in\{0,1\}\), the following identities hold for all \(M,t\):</p>
 <p>Idempotence</p>
+<div class="math-display">\[E\left(M,t\right)2=E\left(M,t\right)\]</div>
 <p>Gating stability</p>
-<p>Complement
-Define  as “non-instantiation,” noting this is not logical negation, only set-complement within the codomain.</p>
+<div class="math-display">\[\kappa\left(M\right)E\left(M,t\right)E\left(M,t\right)=\kappa\left(M\right)E\left(M,t\right)\]</div>
+<p>ComplementDefine \(E\left(M,t\right)=1-E\left(M,t\right)\) as “non-instantiation,” noting this is not logical negation, only set-complement within the codomain.</p>
 <p>These give you a tiny algebra that is useful later for composing existence with other motion functions.</p>
 <h2><strong>4.9 Summary</strong></h2>
-<p>Existence  is a binary time-indexed function  that gates motion into temporal reality without introducing duration, change, causality, persistence, or meaning. Heat and polarity remain timeless descriptors of motion content; existence determines when that content is instantiated.</p>
+<p>Existence \(E\) is a binary time-indexed function \(E\left(M,t\right)\) that gates motion into temporal reality without introducing duration, change, causality, persistence, or meaning. Heat and polarity remain timeless descriptors of motion content; existence determines when that content is instantiated.</p>
 <h2><strong>5. Time as an Emergent Index Structure</strong></h2>
 <h2><strong>5.1 Time Is Required by Existence, Not Prior to It</strong></h2>
 <p>Time is introduced in the Motion Calendar solely because existence requires an index against which instantiation can be evaluated. There is no notion of time independent of existence; without the ability to distinguish between “present” and “absent,” temporal reference collapses.</p>
 <p>Accordingly, time is not treated as a primitive dimension of motion. It is an emergent structure whose minimal role is to support repeated evaluation of the existence function.</p>
-<p>At this layer, time is nothing more than a set  of distinguishable indices. No assumptions are made regarding continuity, metric distance, simultaneity, or flow.</p>
+<p>At this layer, time is nothing more than a set \(T\) of distinguishable indices. No assumptions are made regarding continuity, metric distance, simultaneity, or flow.</p>
 <h2><strong>5.2 Minimal Temporal Structure</strong></h2>
 <p>The weakest structure sufficient for existence is a <strong>set</strong>:</p>
-<p>Such a set allows evaluation of but supports no comparison between indices. In this regime:</p>
+<div class="math-display">\[T=\{t1,t2,…\}\]</div>
+<p>Such a set allows evaluation of \(E\left(M,t\right)\;\)but supports no comparison between indices. In this regime:</p>
 <p>Instantiation is defined</p>
 <p>Transition can be stated relationally</p>
 <p>Duration, order, and causality are undefined</p>
 <p>This is the most primitive notion of time compatible with existence.</p>
 <h2><strong>5.3 Ordered Time as a Derived Structure</strong></h2>
-<p>If an order relation  is introduced on , then temporal succession becomes meaningful:</p>
+<p>If an order relation \(≺\) is introduced on \(T\), then temporal succession becomes meaningful:</p>
+<div class="math-display">\[\left(T,≺\right)\]</div>
 <p>With ordering, transitions gain directionality, and persistence becomes interpretable as sustained instantiation across ordered indices. Importantly, ordering is <strong>not required</strong> for existence itself; it is an enrichment of temporal structure.</p>
 <p>At this point, concepts such as “before,” “after,” and “next” become definable, but they remain descriptive rather than causal.</p>
 <h2><strong>5.4 Metric Time and Duration</strong></h2>
-<p>Only when a metric  is imposed does duration become definable:</p>
+<p>Only when a metric \(d:T\times T\to R\geq0\) is imposed does duration become definable:</p>
+<div class="math-display">\[duration\left(M;t1,t2\right)=d\left(t1,t2\right)\;subject\;to\;E\left(M,t\right)=1\;\forall t\in[t1,t2]\]</div>
 <p>Thus, duration is a <strong>third-order construct</strong>, dependent on:</p>
 <p>existence</p>
 <p>ordering</p>
@@ -126,9 +146,11 @@ Define  as “non-instantiation,” noting this is not logical negation, only se
 <h2><strong>6. Instantiation and Potential Motion</strong></h2>
 <h2><strong>6.1 The Necessity of Non-Instantiated Motion</strong></h2>
 <p>The Motion Calendar permits the definition of motion independent of its instantiation. Heat and polarity describe motion content without reference to time. As a result, motion may be fully specified yet non-existent at every temporal index:</p>
+<div class="math-display">\[\forall t\in T,E\left(M,t\right)=0\]</div>
 <p>Such motion is not contradictory, incomplete, or null. It is <strong>potential</strong>.</p>
 <h2><strong>6.2 Instantiated Motion</strong></h2>
-<p>A motion  is instantiated at time  if and only if:</p>
+<p>A motion \(M\) is instantiated at time \(t\) if and only if:</p>
+<div class="math-display">\[E\left(M,t\right)=1\]</div>
 <p>Instantiation does not alter the intrinsic properties of motion. It merely permits those properties to participate in temporal relations, interaction, and observation.</p>
 <p>All physical interaction, environmental coupling, and executed action require instantiated motion.</p>
 <h2><strong>6.3 Potential Motion</strong></h2>
@@ -140,7 +162,8 @@ Define  as “non-instantiation,” noting this is not logical negation, only se
 <p>internally simulated motion</p>
 <p>without conflating these with physical or executed states.</p>
 <h2><strong>6.4 Transition Between Potential and Instantiated Motion</strong></h2>
-<p>The transition from potential to instantiated motion is captured entirely by the existence  function:</p>
+<p>The transition from potential to instantiated motion is captured entirely by the existence \(E\) function:</p>
+<div class="math-display">\[E\left(M,t\right):0\to1\]</div>
 <p>No additional mechanism is required at this layer. Importantly, this transition does not imply:</p>
 <p>cause</p>
 <p>effort</p>
@@ -159,12 +182,15 @@ Define  as “non-instantiation,” noting this is not logical negation, only se
 <p>Identity is often assumed to be inherent to an object or motion. In the Motion Calendar, identity is not primitive and is not guaranteed by definition alone. A motion may be fully specified in terms of heat and polarity without possessing identity in time.</p>
 <p>Identity requires <strong>persistent instantiation</strong>. Without existence evaluated across time, there is nothing to identify as “the same.”</p>
 <h2><strong>7.2 Identity as a Function of Existence</strong></h2>
-<p>Let be a motion-instance, and let be a temporal index set equipped with an ordering relation . Identity arises when existence is satisfied across an ordered subset of </p>
+<p>Let \(M\;\)be a motion-instance, and let \(T\;\)be a temporal index set equipped with an ordering relation \(≺\). Identity arises when existence is satisfied across an ordered subset of \(T\)</p>
 <p>Define the <strong>identity support set</strong>:</p>
-<p>If contains more than one temporally ordered element, identity becomes definable as continuity of instantiation rather than as a static label.</p>
+<div class="math-display">\[I\left(M\right)=\{t\in T|E\left(M,t\right)=1\}\]</div>
+<p>If \(I\left(M\right)\;\)contains more than one temporally ordered element, identity becomes definable as continuity of instantiation rather than as a static label.</p>
 <h2><strong>7.3 Identity Mass</strong></h2>
-<p>Define <strong>identity mass</strong> as the aggregate measure of existence  over time:</p>
+<p>Define <strong>identity mass</strong> as the aggregate measure of existence \(E\) over time:</p>
+<div class="math-display">\[\mu\left(M\right)=\sum_{t\in I\left(M\right)} E\left(M,t\right)\]</div>
 <p>or, in a metric temporal structure,</p>
+<div class="math-display">\[\mu\left(M\right)=\sum_{t\in I\left(M\right)} E\left(M,t\right)dt\]</div>
 <p>Identity mass quantifies persistence without encoding meaning, purpose, or structure. A higher identity mass corresponds to greater temporal stability, not greater importance or correctness.</p>
 <h2><strong>7.4 Identity Without Memory</strong></h2>
 <p>Identity does not require memory at this layer. Memory is an informational construct that may encode identity, but identity itself is simply repeated instantiation.</p>
@@ -186,11 +212,13 @@ Define  as “non-instantiation,” noting this is not logical negation, only se
 <p>A relation linking transitions across identities</p>
 <p>None of these are supplied by existence alone.</p>
 <h2><strong>8.3 Causal Chains as Structured Transitions</strong></h2>
-<p>Let  and  be motion-instances with identity supports  and  minimal causal relation may be expressed as a constraint:</p>
-<p>together with an additional rule supplied by higher motion functions linking ​ to .</p>
+<p>Let \(M1\) and \(M2\) be motion-instances with identity supports \(I\left(M1\right)\) and \(I\left(M2\right)\) minimal causal relation may be expressed as a constraint:</p>
+<div class="math-display">\[E\left(M1,t1\right)=1\wedge E\left(M2,t2\right)=1\wedge t1≺t2\]</div>
+<p>together with an additional rule supplied by higher motion functions linking \(M1\)​ to \(M2\).</p>
 <p>Existence supplies the <em>when</em>; causality requires an added <em>because</em>.</p>
 <h2><strong>8.4 No Spontaneous Causation at the Existence Layer</strong></h2>
-<p>Transitions in existence :</p>
+<p>Transitions in existence \(E\):</p>
+<div class="math-display">\[\Delta E\left(M;t1,t2\right)\neq0\]</div>
 <p>do not imply cause. A motion may begin or cease to exist without violating any rule at this layer. Any prohibition against spontaneous instantiation must be imposed by higher-order constraints, not assumed.</p>
 <h2><strong>8.5 Directionality and Asymmetry</strong></h2>
 <p>Causal asymmetry arises only when:</p>

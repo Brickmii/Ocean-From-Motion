@@ -5,6 +5,16 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Chapter 2: Polarity — Ocean From Motion</title>
 <link rel="stylesheet" href="/Ocean-From-Motion/style.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body, {
+    delimiters: [
+      {left: '\\[', right: '\\]', display: true},
+      {left: '\\(', right: '\\)', display: false}
+    ],
+    throwOnError: false
+  });"></script>
 </head>
 <body>
 <header>
@@ -33,32 +43,49 @@
 <h2><strong>3. Algebra of Polarity</strong></h2>
 <h2><strong>3.1 Polarity Space</strong></h2>
 <p>Heat magnitude is defined over the non-negative reals:</p>
-<p>Where  is the heat index and  is the heat constant.</p>
+<div class="math-display">\[\kappa(M)\in R\geq0,\kappa\left(M\right)=|M|k\]</div>
+<p>Where \(|M|\in N\) is the heat index and \(k\) is the heat constant.</p>
 <p>Polarity refines heat by introducing an opposition label:</p>
+<div class="math-display">\[\sigma\in\{+,-\}.\]</div>
 <p>A <strong>polar motion unit</strong> is defined as the ordered pair:</p>
+<div class="math-display">\[P:=\left(\sigma,\kappa\right),P\in\{+,-\}\times R\geq0.\]</div>
 <p>Here, 𝜅 represents motion magnitude, and σ represents polarity class only. The polarity label has no numerical value and no geometric interpretation.</p>
 <p>Define the projection maps:</p>
+<div class="math-display">\[pol\left(P\right)=\sigma,mag\left(P\right)=\kappa\]</div>
 <h2><strong>3.2 Embedding of Heat into Polarity</strong></h2>
 <p>Heat embeds into polarity without alteration of magnitude:</p>
-<p>This embedding is non-unique by design. Heat does not determine polarity; polarity is an independent refinement that preserves heat magnitude while introducing opposition. Here,  denotes a canonical embedding of heat into polarity, not an identity operator; it preserves magnitude while introducing an opposition class of motion.</p>
+<div class="math-display">\[ι+\left(\kappa\right)=\left(+,\kappa\right),ι-\left(\kappa\right)=\left(-,\kappa\right).\]</div>
+<p>This embedding is non-unique by design. Heat does not determine polarity; polarity is an independent refinement that preserves heat magnitude while introducing opposition. Here, \(ι\) denotes a canonical embedding of heat into polarity, not an identity operator; it preserves magnitude while introducing an opposition class of motion.</p>
 <h2><strong>3.3 Polarity Involution</strong></h2>
 <p>Define the <strong>polarity inversion operator</strong>:</p>
+<div class="math-display">\[\neg\left(\sigma,\kappa\right):=\left(-\sigma,\kappa\right),\]</div>
 <p>With,</p>
+<div class="math-display">\[-\left(+\right)=-,-\left(-\right)=+.\]</div>
 <p>Axioms:</p>
+<div class="math-display">\[\neg\neg P=P,mag\left(\neg P\right)=mag\left(P\right).\]</div>
 <p>This involution encodes opposition without implying negation, subtraction, or reversal in any directional sense.</p>
 <h2><strong>3.4 Composition of Polar Motions</strong></h2>
 <p>Polarity admits composition only in ways that preserve heat additivity while avoiding cancellation or resultant direction.</p>
 <h3><strong>3.4.1 Same-Polarity Composition</strong></h3>
 <p>For polar motions of identical class, define:</p>
+<div class="math-display">\[\left(\sigma,\kappa1\right)\;⊞\;\left(\sigma,\kappa2\right)\;:=\;\left(\sigma,\kappa1+\kappa2\right).\]</div>
 <p>This operation is <strong>partial</strong> and defined if and only if the polarity classes match. It preserves both magnitude additivity and polarity identity.</p>
 <h3><strong>3.4.2 General Union Composition</strong></h3>
 <p>To compose polar motions of arbitrary class without introducing cancellation, define a three-valued polarity set:</p>
+<div class="math-display">\[\Sigma:=\{+,-,\pm\},\]</div>
 <p>where ± denotes the presence of both polarity classes.</p>
 <p>Define the union operator:</p>
+<div class="math-display">\[\left(\sigma1,\kappa1\right)\;⊎\;\left(\sigma2,\kappa2\right)\;:=\;\left(\sigma1\oplus\sigma2,\;\kappa1+\kappa2\right),\]</div>
 <p>with polarity combination rule:</p>
+<p>\(+\oplus+=+\)</p>
+<p>\(-\oplus-=-\)</p>
+<p>\(+\oplus-=\pm\)</p>
+<p>\(-\oplus+=\pm\)</p>
+<p>\(\pm\oplus\sigma=\pm\)</p>
 <p>This operation preserves total magnitude while recording polarity presence without resolving it into a net value.</p>
 <h2><strong>3.5 Preservation Under Polarity</strong></h2>
 <p>Polarity refines heat without altering its preservation of magnitude:</p>
+<div class="math-display">\[mag\left(P1⊎P2\right)=mag\left(P1\right)+mag\left(P2\right).\]</div>
 <p>Preservation applies to magnitude only. Polarity tracks opposition, not balance.</p>
 <h2><strong>3.6 Forbidden Operations</strong></h2>
 <p>To prevent the introduction of higher-order structure, the following operations are explicitly undefined in polarity algebra:</p>
